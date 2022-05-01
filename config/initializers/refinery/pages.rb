@@ -16,7 +16,7 @@ Refinery::Pages.configure do |config|
 
   # You can specify reserved words that won't be used as page slugs.
   # This only applies when marketable_urls is enabled.
-  # config.friendly_id_reserved_words = ["index", "new", "session", "login", "logout", "users", "refinery", "admin", "images", "rails"]
+  # config.friendly_id_reserved_words = ["index", "new", "session", "login", "logout", "users", "refinery", "admin", "images", "rails", "wymiframe"]
 
   # You can specify reserved paths that won't interfere with others routes like ActiveStorage route
   # config.reserved_paths = ["/rails/active_storage"]
@@ -53,7 +53,7 @@ Refinery::Pages.configure do |config|
 
   # config.layout_template_whitelist = ["application"]
 
-  # config.use_layout_templates = true
+  # config.use_layout_templates = false
 
   # Use these if you want to use layout or view templates whose filenames do not match the default pattern
   # For more information on the patterns see Dir.glob (http://ruby-doc.org/core-2.2.0/Dir.html#method-c-glob)

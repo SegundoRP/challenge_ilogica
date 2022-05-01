@@ -36,7 +36,9 @@ Rails.application.configure do
   # Store uploaded files on the local file system in a temporary directory.
   config.active_storage.service = :test
   if config.respond_to?(:action_mailer)
-    config.action_mailer.perform_caching = false
+  if config.respond_to?(:action_mailer)
+      config.action_mailer.perform_caching = false
+  end
   end
 
   # Tell Action Mailer not to deliver emails to the real world.

@@ -37,7 +37,7 @@ Refinery::Images.configure do |config|
 
   config.dragonfly_name = :refinery_images
   # config.dragonfly_verify_urls = true
-  # config.dragonfly_secret = "8096c19c21046122d44ccd72326b82f86ef5683a10eb7afe"
+  # config.dragonfly_secret = "c62dc4b23fa011cd210746004f4f7dc44ff8c4841a8a3a13"
   # config.dragonfly_url_host = ""
   # config.dragonfly_datastore_root_path = "/home/srebaza/code/SegundoRP/challenge_ilogica/public/system/refinery/images"
   # config.dragonfly_url_format = "/system/refinery/images/:job/:basename.:ext"
