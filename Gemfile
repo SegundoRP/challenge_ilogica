@@ -21,6 +21,11 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
+gem 'refinerycms-authentication-devise', github: 'refinery/refinerycms-authentication-devise', branch: 'master'
+gem 'refinerycms-acts-as-indexed', ['~> 3.0', '>= 3.0.0']
+gem 'refinerycms-wymeditor', ['~> 2.0', '>= 2.0.0']
+gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n', branch: 'master'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -28,7 +33,6 @@ gem 'redis', '~> 4.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
-gem 'devise'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form', github: 'heartcombo/simple_form'
@@ -61,3 +65,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+#################### Camaleon CMS include all gems for plugins and themes ####################
+require_relative './lib/plugin_routes'
+instance_eval(PluginRoutes.draw_gems)
+
+
+#################### Camaleon CMS include all gems for plugins and themes ####################
+require_relative './lib/plugin_routes'
+instance_eval(PluginRoutes.draw_gems)

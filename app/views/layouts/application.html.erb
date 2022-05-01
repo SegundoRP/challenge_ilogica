@@ -1,27 +1,22 @@
 <!DOCTYPE html>
-<html>
+<%= render "/refinery/html_tag" %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <head>
-    <title>Mobster - One page app template</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Mobile Application HTML5 Template">
-    <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
-
-    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
-
-
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= render "/refinery/head" %>
+    <%= render "/refinery/javascripts" %>
   </head>
-
-  <body>
-    <%= render 'shared/flashes' %>
-
-    <%= yield %>
+  <body id="<%= canonical_id @page %>" class="<%= view_template_class @page %>">
+    <%# <%= site_bar -%>
+    <div id="page_container">
+      <header id="header" role="banner">
+        <%# <%= render "/refinery/header" -%>
+      </header>
+      <main id="page" role="main">
+        <%= yield %>
+      </main>
+      <footer role="contentinfo">
+        <%# <%= render "/refinery/footer" -%>
+      </footer>
+    </div>
   </body>
 </html>
